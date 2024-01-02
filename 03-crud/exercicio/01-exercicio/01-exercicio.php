@@ -1,7 +1,7 @@
 <?php
 require 'confi.php';
 
-$sql = $pdo->query('SELECT * FROM usuario');
+$sql = $pdo->query('SELECT * FROM users');
 $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
@@ -17,12 +17,12 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
     <th>AÇÕES</th>  
   </tr>    
 
-  <tr>
-    <?php foreach ($dados as $row):?>
-    <td> <?php echo $row['id']; ?></td>
-    <td><?php echo $row['nome']; ?></td>
-    <td><?php echo $row['email']; ?></td>
-  </tr>
+  <?php foreach ($dados as $row):?>
+    <tr>
+      <td> <?php echo $row['id']; ?></td>
+      <td><?php echo $row['nome']; ?></td>
+      <td><?php echo $row['email']; ?></td>
+    </tr>
   <?php endforeach?>
 
 </table>

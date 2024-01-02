@@ -6,7 +6,7 @@ $dados = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
-<a href="adicionar.php"><button>ADICIONAR USUARIO</button></a>
+<a href="adicionarForm.php"><button>ADICIONAR USUARIO</button></a>
 <br>
 <br>
 
