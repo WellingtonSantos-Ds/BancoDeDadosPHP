@@ -1,0 +1,7 @@
+O php em 99% das vezes trabalha com banco de dados relacional:
+mas utilizados são MySQL e MariaDb que é o MySQL melhorado. 4 coisas que um banco de dados deve fazer;
+
+INSERIR
+REMOVER
+ALTERAR 
+CONSULTAR 
