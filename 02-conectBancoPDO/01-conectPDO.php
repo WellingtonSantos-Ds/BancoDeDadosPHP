@@ -5,7 +5,7 @@
 $pdo = new PDO("mysql:dbname=test;host=localhost","root","");
 
 // Instanciando o PDO com o query, Que pode buscar , adicionar etc..  
-$sql = $pdo->query('SELECT * FROM usuario');
+$sql = $pdo->query('SELECT * FROM users');
 
 // Contando numero de registro;
 echo 'TOTAL = '.$sql->rowCount();
