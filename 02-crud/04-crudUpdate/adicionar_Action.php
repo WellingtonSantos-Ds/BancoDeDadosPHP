@@ -6,11 +6,9 @@ $email = filter_input(INPUT_POST,'email',FILTER_VALIDATE_EMAIL);
 
 if ($name && $email)
 {
-  // Verificando se tem dois emails iguais ;
   $sql = $pdo->prepare("SELECT * FROM users WHERE email = :email");
   $sql ->bindValue(':email',$email);
   $sql -> execute();
-  // Se for mair que 0 eu exibo;
   if($sql->rowCount() === 0)
   {
 

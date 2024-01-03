@@ -3,7 +3,7 @@ require './bncoDB/conect.php';
 $sql = $conectaDb->query("SELECT * FROM users");
 $mostra = $sql->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
+<a href="./bncoDB/addform.php"><button>ADICIONAR</button></a>
 <table border="1" width="100%">
   <tr>
     <th>ID</th>

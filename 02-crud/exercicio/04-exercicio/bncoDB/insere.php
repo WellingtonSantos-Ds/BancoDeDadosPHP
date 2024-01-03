@@ -22,7 +22,7 @@ if($nome && $email)
   }
   else
   {
-    header('Location:addfom.php');
+    header('Location:addform.php');
   }
 }
 else
