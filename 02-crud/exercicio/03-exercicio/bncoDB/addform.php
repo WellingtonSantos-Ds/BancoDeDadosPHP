@@ -1,5 +1,7 @@
-<h1> Adicionar Usuário Ex02</h1>
-<form method="post" action="adicionarAction.php">
+
+<h1> Adicionar Usuário EX03 </h1>
+
+<form method="post" action="insere.php">
   <label>
     Nome:<br/>
     <input type="text" name="name"/>
