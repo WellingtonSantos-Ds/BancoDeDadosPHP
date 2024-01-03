@@ -29,7 +29,7 @@ if($sql->rowCount() > 0)
       <td> <?=$array['email']?></td>
       <td>
         <a href="editar.php?id=<?=$array['id']?>"><button> Editar </button></a>
-        <a href="excluir.php?id=<?=$array['id']?>"><button> Excluir </button></a>
+        <a href="excluir.php?id=<?=$array['id']?>"onclick="return confirm('Tem certeza que deseja excluir?')"><button> Excluir </button></a>
       </td>
     </tr>
   <?php endforeach?>

@@ -14,11 +14,11 @@ $mostra = $sql->fetchAll(PDO::FETCH_ASSOC);
 
   <?php foreach($mostra as $users):?>
     <tr>
-      <td><?php echo $users['nome']?></td>
       <td><?php echo $users['id']?></td>
+      <td><?php echo $users['nome']?></td>
       <td><?php echo $users['email']?></td>
       <td>
-        <a href="nada.php?id=<?=$users['id']?>"><button>EDITAR</button></a>
+        <a href="./bncoDB/editar.php?id=<?=$users['id']?>"><button>EDITAR</button></a>
         <a href="nada.php?id=<?=$users['id']?>"><BUtton>DELETAR</BUtton></a>
       </td>
     </tr>

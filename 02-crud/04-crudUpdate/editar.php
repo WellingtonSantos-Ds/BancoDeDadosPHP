@@ -22,7 +22,11 @@ else
 ?>
 
 <h1> EDITAR USÚARIO</h1>
-<form method="post" action="editar_action.php">
+<form method="post" action="editar_Action.php">
+ 
+  <!-- Mandando um id oculto; -->
+  <input type="hidden" name="id" value="<?=$info['id']?>">
+
   <label>
     Nome:<br/>
     <input type="text" name="name" value="<?=$info['nome']?>"/>
