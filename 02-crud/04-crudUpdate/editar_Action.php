@@ -14,10 +14,9 @@ if ($id && $nome && $email)
 
  header('Location:index.php');
  exit;
-
 }
 else
 {
-  header('Location:index.php');
+  header('Location:editar.php');
   exit;
 }

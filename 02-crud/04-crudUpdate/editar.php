@@ -2,7 +2,7 @@
 require 'config.php';
 
 $info=[];
-
+// id Enviado pelo index.php 
 $id = filter_input(INPUT_GET,'id');
 
 $sql = $pdo->prepare("SELECT * FROM users WHERE id = :id");
@@ -22,6 +22,7 @@ else
 ?>
 
 <h1> EDITAR USÚARIO</h1>
+
 <form method="post" action="editar_Action.php">
  
   <!-- Mandando um id oculto; -->
