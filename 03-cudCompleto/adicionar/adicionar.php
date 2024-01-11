@@ -10,8 +10,6 @@ if($name&&$email)
   $sql ->bindValue(':email',$email);
   $sql ->execute();
   
-  header('Location:../index.php');
-
 }
 else
 {
@@ -24,6 +22,8 @@ if($sql->rowCount()=== 0)
   $add->bindValue(':name',$name);
   $add->bindValue(':email',$email);
   $add->execute();
+  
+  header('Location:../index.php');
 }
 else
 {
