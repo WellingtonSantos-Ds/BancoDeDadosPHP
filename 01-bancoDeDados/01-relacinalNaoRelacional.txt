@@ -5,3 +5,5 @@ CONSULTAR
 INSERIR
 ALTERAR 
 REMOVER
+
+DAO = data acesse objet 
