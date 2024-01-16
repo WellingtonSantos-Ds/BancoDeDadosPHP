@@ -1,7 +1,7 @@
-<?php
-
-class Users
-{
+ <?php
+ 
+ class Users
+ {
   private $id;
   private $nome;
   private $email;
@@ -10,9 +10,9 @@ class Users
   {
     return $this->id;
   }
-  public function setId($i)
+  public function setId(int $i)
   {
-    $this->id = trim($i);
+    $this-> id = trim($i);
   }
 
   public function getNome()
@@ -32,14 +32,13 @@ class Users
   {
     $this->email = strtolower(trim($e));
   }
-}
 
+ }
 
-interface UsersDao
-{
-  public function findAll();
-  public function findById($id);
-  public function add (Users $u);
+interface UsersDao{
+  public function fidAll();
+  public function fidById();
+  public function add(Users $u);
   public function update(Users $u);
   public function delete($id);
 }

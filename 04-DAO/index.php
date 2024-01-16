@@ -1,14 +1,10 @@
 <?php
-require 'conecao/conecao.php';
-require 'baDao/usersDaoMysql.php';
+require_once 'conecao/conecao.php';
+require_once 'baDao/usersDaoMysql.php';
 
-$usuarioDao = new UsersDaoMysql($conecao);
-$lista = $usuarioDao -> findAll();
+$crudMostra = new UsersCrud($conecao);
+$list = $crudMostra->fidAll();
 ?>
-
-<a href="add.php"><button>Adicionar</button></a>
-<br>
-<br>
 
 <table border="1" width="100%">
   <tr>
@@ -16,11 +12,11 @@ $lista = $usuarioDao -> findAll();
     <th>NOME</th>
     <th>EMAIL</th>
   </tr>
-  <?php foreach ($lista as $us):?>
+  <?php foreach($list as $u):?>
     <tr>
-    <td><?= $us->getId()?></td>
-    <td><?= $us->getNome()?></td>
-    <td><?= $us->getEmail()?></td>
-  </tr>
-  <?php endforeach;?>
+      <td><?=$u->getId()?></td>
+      <td><?=$u->getNome()?></td>
+      <td><?=$u->getEmail()?></td>
+      </tr>
+  <?php endforeach?> 
 </table>
