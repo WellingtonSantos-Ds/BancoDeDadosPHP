@@ -15,12 +15,17 @@ $list = $usuarioDao->fidAll();
     <th>ID</th>
     <th>NOME</th>
     <th>EMAIL</th>
+    <th>ACTION</th>
   </tr>
   <?php foreach($list as $u):?>
     <tr>
       <td><?=$u->getId()?></td>
       <td><?=$u->getNome()?></td>
       <td><?=$u->getEmail()?></td>
-      </tr>
+      <td>
+        <a href="editarForm.php?id=<?=$u->getId()?>"><button>Editar</button></a>
+        <a href="excluir.php?id=<?=$u->getId()?>"><button>Excluir</button></a>
+      </td>
+    </tr>
   <?php endforeach?> 
 </table>

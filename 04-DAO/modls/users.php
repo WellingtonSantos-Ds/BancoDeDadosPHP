@@ -21,7 +21,7 @@
   }
   public function setNome($n)
   {
-    $this->nome = ucwords($n);
+    $this->nome = ucwords($n); 
   }
 
   public function getEmail()
@@ -37,7 +37,7 @@
 
 interface UsersDao{
   public function fidAll();
-  public function findById();
+  public function findById($id);
   public function findByEmail($email);
   public function add(Users $u);
   public function update(Users $up);

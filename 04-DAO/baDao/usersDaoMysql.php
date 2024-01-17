@@ -64,17 +64,44 @@ class UsersCrud implements UsersDao
     return $u;
   }
 
-  public function findById()
+  public function findById($id)
   {
+    $sql = $this->pdo->prepare("SELECT*FROM users WHERE id = :id");
+    $sql-> bindValue(':id',$id);
+    $sql-> execute();
 
+    if($sql-> rowCount() > 0)
+    {
+      $data = $sql ->fetch();
+
+      $u = new Users();
+      $u-> setId($data['id']);
+      $u-> setNome($data['nome']);
+      $u-> setEmail($data['email']);
+      
+      return $u;
+    }
+    else
+    {
+      return false;
+    } 
   }
   
   public function update(Users $up)
   {
-    
+    $sql = $this->pdo->prepare("UPDATE users SET nome = :nome, email = :email WHERE id = :id");
+    $sql->bindValue(':nome' , $up->getNome());
+    $sql->bindValue(':email', $up->getEmail());
+    $sql->bindValue(':id', $up->getId());
+    $sql->execute();
+
+    return true;
   }
+
   public function delete($id)
   {
-    
+    $sql = $this->pdo->prepare('DELETE FROM users WHERE id = :id');
+    $sql->bindValue(':id',$id);
+    $sql->execute();
   }
 }
