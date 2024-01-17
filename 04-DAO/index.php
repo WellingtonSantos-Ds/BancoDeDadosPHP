@@ -1,11 +1,15 @@
 <?php
-require_once 'conecao/conecao.php';
-require_once 'baDao/usersDaoMysql.php';
+require 'conexao/conexao.php';
+require 'baDao/usersDaoMysql.php';
 
-$crudMostra = new UsersCrud($conecao);
-$list = $crudMostra->fidAll();
+// Estou mandado para o construtor lá do (baDao) uma instancia de (new PDO) isso se chama injeção de dependência;  
+$usuarioDao = new UsersCrud($conexao);
+
+//fidAll me retorna um arry de objeto;
+$list = $usuarioDao->fidAll();
+
 ?>
-
+<a href="addForm.php"><button>Adicionar</button></a>
 <table border="1" width="100%">
   <tr>
     <th>ID</th>
