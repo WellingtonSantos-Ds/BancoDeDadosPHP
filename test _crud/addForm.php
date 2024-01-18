@@ -1,8 +1,3 @@
-<?php
-require 'config'
-
-?>
-
 
 <h1> ADICINAR USUARIO</h1>
 <form method="post" action="add.php">
