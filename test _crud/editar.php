@@ -7,12 +7,9 @@ $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_EMAIL);
 if($id && $email && $nome)
 {
   //verificando email   
-   
   $em = $conn->prepare('SELECT * FROM users WHERE email=:email');
   $em->bindValue(':email',$email);
   $em->execute();
-
- 
 
   if($em->rowCount() === 0)
   {
@@ -30,7 +27,5 @@ if($id && $email && $nome)
     $editar->bindValue(':id',$id);
     $editar->execute();
   }  
-   
-
 }
 header('location:index.php');
