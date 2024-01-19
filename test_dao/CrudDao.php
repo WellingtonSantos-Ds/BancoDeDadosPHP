@@ -85,7 +85,7 @@ class CrudDao implements UsuarioDao
 
     if($verifica->rowCount() > 0)
     {
-      $array = $verifica->fetch($email);
+      $array = $verifica->fetch();
       
       $u = new Usuario();
       $u->setId($array['id']);

@@ -7,7 +7,7 @@ $conDao = new CrudDao($conn);
 $nome = filter_input(INPUT_POST,'nome');
 $email = filter_input(INPUT_POST,'email');
 
-if($nome && $email && $conDao->acharPeloEmail($email) === false)
+if($nome && $email && $conDao->acharPeloEmail($email) == false)
 {
   $usuario = new Usuario();
   $usuario->setNome($nome);
