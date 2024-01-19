@@ -37,9 +37,9 @@
 
 interface UsersDao{
   public function fidAll();
-  public function findById($id);
-  public function findByEmail($email);
-  public function add(Users $u);
   public function update(Users $up);
+  public function add(Users $u);
+  public function findByEmail($email);
+  public function findById($id);
   public function delete($id);
 }
