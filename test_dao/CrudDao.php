@@ -46,7 +46,7 @@ class CrudDao implements UsuarioDao
   // Editando usuários no banco de dados
   public function editar(Usuario $u)
   {
-    $sql = $this->pdo->prepare('UPDATE usurs SET nome = :nome, email = :email WHERE id = :id');
+    $sql = $this->pdo->prepare('UPDATE users SET nome = :nome, email = :email WHERE id = :id');
     $sql->bindValue(':id',$u->getId());
     $sql->bindValue(':nome',$u->getNome());
     $sql->bindValue(':email',$u->getEmail());
@@ -61,7 +61,14 @@ class CrudDao implements UsuarioDao
     $sql->execute();
     if($sql->rowCount() > 0)
     {
-      return true;
+      $data = $sql->fetch();
+
+      $u = new Usuario();
+      $u->setId($data['id']);
+      $u->setNome($data['nome']);
+      $u->setEmail($data['email']);   
+
+      return $u;
     }
     else
     {
@@ -78,7 +85,14 @@ class CrudDao implements UsuarioDao
 
     if($verifica->rowCount() > 0)
     {
-      return true;
+      $array = $verifica->fetch($email);
+      
+      $u = new Usuario();
+      $u->setId($array['id']);
+      $u->setNome($array['nome']);
+      $u->setEmail($array['email']);
+
+      return $u;
     }
     else
     {

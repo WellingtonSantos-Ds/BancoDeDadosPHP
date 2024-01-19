@@ -5,7 +5,7 @@ require 'CrudDao.php';
 $id = filter_input(INPUT_GET,'id');
 $userDao = new CrudDao($conn);
 
-if($id  && $userDao->acharPeloId($id)=== true)
+if($id  && $userDao->acharPeloId($id) == true)
 {
   $userDao->excluir($id);
 }

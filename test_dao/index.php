@@ -22,7 +22,7 @@ $lista = $usuario->acharTodos();
       <td><?= $u->getNome()?></td>
       <td><?=$u->getEmail()?></td>      
       <td>
-        <a href="editar.php?id=<?=$u->getId()?>"><button>Editar</button></a>
+        <a href="editarHtml.php?id=<?=$u->getId()?>"><button>Editar</button></a>
         <a href="excluir.php?id=<?=$u->getId()?>"><button>Excluir</button></a>
       </td>
     </tr>
