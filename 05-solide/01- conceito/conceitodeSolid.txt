@@ -1,0 +1,18 @@
+O SOLID é um conceito de boas praticas de programação que deixa o código;
+mas suscetível á alteração e com menos risco de dar bugs;
+
+CONCEITO:
+
+S = Sinple responsibility Principle - ( Principio da responsabilidade única ); 
+
+O = Open closed Principe - ( Principio aberto fechado );
+
+L = Liskov substitution Principle - ( Principio da subistituição de Liskov );
+
+I = Interface segregation Principle -( Principio da segregação da Interface );
+
+D = Dependency inversion Principle ( Principio da inversão da dependência );
+
+Se você seguir esse principio você vai ter um código benfeito e bom para manutenção;
+
+
